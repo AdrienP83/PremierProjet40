@@ -1,0 +1,13 @@
+{# empty Twig template #}
+{% extends 'base.html.twig' %}
+{% block title %}Exercice Partie 7{% endblock %}
+{% block body %}
+    <h1> Vous êtes né dans le département du {{ departement }} ! 
+    {% if sexe == "fille" %} 
+        <h1> Vous êtes une {{ sexe }} !</h1>
+    {% elseif sexe=="garcon" %}
+        <h1> Vous êtes un {{ sexe }} ! </h1>
+    {% else %} <h1>Je ne comprend pas votre sexe...</h1>
+    {% endif %}
+    <h1> Nous somme le {{ "now"|format_datetime(locale='fr') }} </h1>
+{% endblock %}

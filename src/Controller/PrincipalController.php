@@ -25,4 +25,10 @@ class PrincipalController extends AbstractController
                             "nom"=>$nom
         ));
     }
+    /**
+     * @Route ("/TutoSymfony/{departement} {sexe}")
+     */
+    public function TutoSymfony ($departement,$sexe){
+        return $this->render('principal/TutoSymfony.html.twig',array("departement"=>$departement,"sexe"=>$sexe));
+    }
 }
